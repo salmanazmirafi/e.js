@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head >
-    
-    <title>E-js</title>
-    </head>
-    <body>
-    
-            <h1>Wellcome Ejs</h1>
-    
-    </body>
+<%- include("layout/header") %>
+    <main>
+      <form action="/" method="post">
+        <input type="text" placeholder="programing" name="planguse" />
+        <button type="submit">Add</button>
+      </form>
+      <ul>
+        <% if(pName.length > 0){%> <% for(let x= 0; x< pName.length; x++){ %>
+        <li><%=pName[x] %></li>
+        <%}%> <% }else{%>
+        <p>No Data Found</p>
+        <% } %>
+      </ul>
+    </main>
+    <footer><p>All right reserved by &copy; Salman Azmi Rafi</p></footer>
+  </body>
 </html>
